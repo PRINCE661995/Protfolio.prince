@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prince Mani Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&family=Instrument+Serif:ital@1&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="loader" aria-hidden="true">
+  <div class="top"><span>Prince Mani</span><span>Portfolio 2026</span></div>
+  <div class="num"><span id="lnum">0</span>%</div>
+</div>
+<div id="progress" aria-hidden="true"></div>
+<div id="cursor" aria-hidden="true"><span>View</span></div>
+<div id="preview" aria-hidden="true"><div class="fill"></div></div>
+
+<nav aria-label="Main" id="nav">
+  <div class="wrap">
+    <a href="#top" class="logo magnetic">Prince<span>.</span></a>
+    <div class="pillbar">
+      <ul class="links">
+        <li><a href="#works"><span class="roll" data-t="Works">Works</span></a></li>
+        <li><a href="#services"><span class="roll" data-t="Services">Services</span></a></li>
+        <li><a href="#resume"><span class="roll" data-t="Resume">Resume</span></a></li>
+      </ul>
+      <span class="badge">Available for work</span>
+      <a href="#contact" class="btn dark magnetic">Let's talk <span class="arr">→</span></a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mmenu"><i></i><i></i></button>
+    </div>
+  </div>
+</nav>
+<div id="mmenu" aria-label="Mobile menu">
+  <ul>
+    <li><a href="#works"><small>01</small>Works</a></li>
+    <li><a href="#services"><small>02</small>Services</a></li>
+    <li><a href="#resume"><small>03</small>Resume</a></li>
+    <li><a href="#contact"><small>04</small>Contact</a></li>
+  </ul>
+  <div class="mfoot"><a href="Prince_Sanjay_Mani_Resume.pdf" download style="color:var(--accent);font-weight:600;text-decoration:none">Download resume ↓</a><span>Available for work</span><span>princesanjaymani@gmail.com</span></div>
+</div>
+
+<header class="hero wrap" id="top">
+  <div class="hero-photo" aria-hidden="true">
+    <svg width="0" height="0" style="position:absolute">
+      <filter id="wind" x="-5%" y="-5%" width="110%" height="110%" color-interpolation-filters="sRGB">
+        <feTurbulence id="windNoise" type="fractalNoise" baseFrequency="0.006 0.03" numOctaves="2" seed="7" result="noise"/>
+        <feDisplacementMap id="windMap" in="SourceGraphic" in2="noise" scale="16" xChannelSelector="R" yChannelSelector="G"/>
+      </filter>
+    </svg>
+    <div class="live"><div class="breathe">
+      <img class="wind" src="images/prince.jpg" alt="" width="1086" height="1448" fetchpriority="high">
+      <img class="still" src="images/prince.jpg" alt="" width="1086" height="1448">
+    </div></div>
+  </div>
+  <svg id="flight" viewBox="0 0 1200 600" preserveAspectRatio="none" aria-hidden="true">
+    <path class="trace" id="tracePath" d="M-40 520 C 180 420, 260 140, 520 220 S 860 520, 1000 300 S 1180 80, 1260 60"/>
+    <g id="plane"><path d="M0 -10 L26 0 L0 10 L5 0 Z" fill="var(--ink)"/><path d="M5 0 L26 0" stroke="var(--paper)" stroke-width="1"/></g>
+  </svg>
+  <h1>
+    <span class="mask"><span class="ln split">Design that</span></span>
+    <span class="mask"><span class="ln"><span class="split">feels</span> <span class="chips" aria-hidden="true"><span class="chip art a1"></span><span class="chip art a2"></span><span class="chip art a3"></span><span class="chip art a4"></span></span></span></span>
+    <span class="mask"><span class="ln"><em class="s split">effortless</em></span></span>
+  </h1>
+  <div class="hero-foot">
+    <i class="rule"></i>
+    <p class="fade">Hi, I'm <strong>Prince Sanjay Mani</strong>, a creative and UI designer in Noida. I make apps, brands and motion graphics, argue with pixels until they line up, and actually name my Figma layers (most days). Powered by chai, deadlines and the occasional “can we make the logo bigger?”</p>
+    <div class="cta-row fade">
+      <a href="#works" class="btn dark magnetic">View my work <span class="arr">→</span></a>
+      <a href="#resume" class="btn ghost magnetic">My resume</a>
+    </div>
+  </div>
+  <div class="scroll-hint" aria-hidden="true">Scroll <i></i></div>
+</header>
+
+<div class="marquee" aria-hidden="true">
+  <div class="track" id="mtrack">
+    <div class="grp">UI/UX Design <svg class="star" viewBox="0 0 20 20"><path fill="currentColor" d="M10 0l2.4 7.6L20 10l-7.6 2.4L10 20l-2.4-7.6L0 10l7.6-2.4z"/></svg> <em>Brand Identity</em> <svg class="star" viewBox="0 0 20 20"><path fill="currentColor" d="M10 0l2.4 7.6L20 10l-7.6 2.4L10 20l-2.4-7.6L0 10l7.6-2.4z"/></svg> Website Design <svg class="star" viewBox="0 0 20 20"><path fill="currentColor" d="M10 0l2.4 7.6L20 10l-7.6 2.4L10 20l-2.4-7.6L0 10l7.6-2.4z"/></svg> <em>Marketing Creatives</em> <svg class="star" viewBox="0 0 20 20"><path fill="currentColor" d="M10 0l2.4 7.6L20 10l-7.6 2.4L10 20l-2.4-7.6L0 10l7.6-2.4z"/></svg> Motion Graphics <svg class="star" viewBox="0 0 20 20"><path fill="currentColor" d="M10 0l2.4 7.6L20 10l-7.6 2.4L10 20l-2.4-7.6L0 10l7.6-2.4z"/></svg></div>
+  </div>
+</div>
+
+<section id="works">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><span class="mask"><span class="ln">Recent <em class="s">projects</em><sup>07</sup></span></span></h2>
+      <p class="fade">Apps, dashboards and websites I've designed. Click any project to see the full case study on Behance.</p>
+    </div>
+  </div>
+  <div class="reel-pin" id="reelPin">
+    <div class="reel" id="reel">
+      <a href="https://www.behance.net/gallery/246184489/HOVERIX-Agriculture-Drone-Website-Ui" target="_blank" rel="noopener" class="work" data-cursor="View">
+        <div class="art a2"><div class="fill"><img class="shot" src="https://mir-s3-cdn-cf.behance.net/projects/808/1c06f4246184489.Y3JvcCwxMzA5LDEwMjQsNjQsMA.png" alt="Hoverix project cover" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.src.replace('/808/','/404/')}else{this.remove()}"></div><span class="tag">Website</span></div>
+        <div class="meta"><h3>Hoverix</h3><span class="year">01</span></div>
+        <p>A responsive, conversion-focused website and design system for an agriculture drone company.</p>
+        <div class="pills"><span class="pill">Website</span><span class="pill">Design system</span></div>
+      </a>
+      <a href="https://www.behance.net/gallery/246179639/Washio-Car-Cleaning-App" target="_blank" rel="noopener" class="work" data-cursor="View">
+        <div class="art a6"><div class="fill"><img class="shot" src="https://mir-s3-cdn-cf.behance.net/projects/808/41ca03246179639.Y3JvcCwxNDI4LDExMTcsMTUxLDA.png" alt="Washio project cover" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.src.replace('/808/','/404/')}else{this.remove()}"></div><span class="tag">Mobile app</span></div>
+        <div class="meta"><h3>Washio</h3><span class="year">02</span></div>
+        <p>Car-cleaning app with booking, service selection, subscription and scheduling flows.</p>
+        <div class="pills"><span class="pill">Mobile</span><span class="pill">Booking flows</span></div>
+      </a>
+      <a href="https://www.behance.net/gallery/243332387/TrustNode-Blockchain-Trust-Risk-Analysis-App" target="_blank" rel="noopener" class="work" data-cursor="View">
+        <div class="art a3"><div class="fill"><img class="shot" src="https://mir-s3-cdn-cf.behance.net/projects/808/ed69fc243332387.Y3JvcCwyMjkyLDE3OTMsMzE3LDA.png" alt="TrustNode project cover" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.src.replace('/808/','/404/')}else{this.remove()}"></div><span class="tag">Dashboard</span></div>
+        <div class="meta"><h3>TrustNode</h3><span class="year">03</span></div>
+        <p>Dashboards and data visualisations that turn blockchain trust and risk analysis into clear insights.</p>
+        <div class="pills"><span class="pill">Dashboard</span><span class="pill">Data viz</span></div>
+      </a>
+      <a href="https://www.behance.net/gallery/245446913/Sabzora-Ecommerce-App-End-to-End-UXUI-Case-Study" target="_blank" rel="noopener" class="work" data-cursor="View">
+        <div class="art a4"><div class="fill"><img class="shot" src="https://mir-s3-cdn-cf.behance.net/projects/808/8c7945245446913.Y3JvcCwzODc3LDMwMzMsNTI3LDA.png" alt="Sabzora project cover" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.src.replace('/808/','/404/')}else{this.remove()}"></div><span class="tag">UX case study</span></div>
+        <div class="meta"><h3>Sabzora</h3><span class="year">04</span></div>
+        <p>An end-to-end grocery e-commerce case study: research, user flows, prototypes and checkout.</p>
+        <div class="pills"><span class="pill">UX case study</span><span class="pill">E-commerce</span></div>
+      </a>
+      <a href="https://www.behance.net/gallery/246477191/Travellz-The-Travell-Booking-Website" target="_blank" rel="noopener" class="work" data-cursor="View">
+        <div class="art a1"><div class="fill"><img class="shot" src="https://mir-s3-cdn-cf.behance.net/projects/808/2d9522246477191.Y3JvcCwxNDI4LDExMTcsMTQ4LDA.png" alt="Travellz project cover" loading="lazy" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.src.replace('/808/','/404/')}else{this.remove()}"></div><span class="tag">Website</span></div>
+        <div class="meta"><h3>Travellz</h3><span class="year">05</span></div>
+        <p>A travel booking website with search, trip details and a simple booking flow.</p>
+        <div class="pills"><span class="pill">Website</span><span class="pill">Travel</span></div>
+      </a>
+      <a href="https://www.behance.net/princemani6" target="_blank" rel="noopener" class="work" data-cursor="View">
+        <div class="art a1"><div class="fill"></div><span class="tag">Mobile app</span></div>
+        <div class="meta"><h3>Align Go</h3><span class="year">06</span></div>
+        <p>UI/UX for a basic accounting app, built to make everyday bookkeeping simple for small businesses.</p>
+        <div class="pills"><span class="pill">UI/UX</span><span class="pill">Mobile</span></div>
+      </a>
+      <a href="https://www.behance.net/princemani6" target="_blank" rel="noopener" class="work" data-cursor="View">
+        <div class="art a2"><div class="fill"></div><span class="tag">ERP</span></div>
+        <div class="meta"><h3>Nutshell</h3><span class="year">07</span></div>
+        <p>UI/UX for an ERP app made for the cashew industry, from procurement to processing.</p>
+        <div class="pills"><span class="pill">UI/UX</span><span class="pill">ERP</span></div>
+      </a>
+      <a href="https://www.behance.net/princemani6" target="_blank" rel="noopener" class="work more" data-cursor="Open">
+        <div class="more-box"><span>See all my work on</span><b>Behance <span class="arr">↗</span></b></div>
+      </a>
+    </div>
+    
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><span class="mask"><span class="ln">What I <em class="s">do</em></span></span></h2>
+      <p class="fade">Five ways I can help, from a single landing page to a full product.</p>
+    </div>
+    <ul class="svc" id="svc">
+      <li data-art="a1"><span class="n">01</span><h3>UI/UX Design</h3><p>Web and mobile apps, dashboards and onboarding flows: wireframes, prototypes, UI and Figma design systems ready for developer handoff.</p><span class="go">→</span></li>
+      <li data-art="a2"><span class="n">02</span><h3>Brand Identity</h3><p>Logos, visual identity, typography and colour that give your business one recognisable look.</p><span class="go">→</span></li>
+      <li data-art="a3"><span class="n">03</span><h3>Website Design</h3><p>Responsive websites and landing pages designed in Figma and built in Framer, ready to launch.</p><span class="go">→</span></li>
+      <li data-art="a4"><span class="n">04</span><h3>Marketing Creatives</h3><p>Social media creatives, ads and marketing collateral in Photoshop, Illustrator and Canva.</p><span class="go">→</span></li>
+      <li data-art="a6"><span class="n">05</span><h3>Motion Graphics</h3><p>Product videos, animated explainers and Lottie animations in After Effects and Premiere Pro.</p><span class="go">→</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="resume">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2><span class="mask"><span class="ln">My <em class="s">resume</em></span></span></h2>
+      <p class="fade">2+ years in visual design, branding, marketing creatives and UI for web and mobile products.</p>
+    </div>
+    <div class="resume-grid">
+      <ol class="timeline" id="timeline">
+        <span class="rail" aria-hidden="true"><i id="rail"></i></span>
+        <li class="job now">
+          <span class="when">Apr 2026 – Present</span>
+          <h3>Creative UI Designer</h3>
+          <span class="co">Align Info Solution (AlignBooks) · Noida</span>
+          <p>Designing web and mobile interfaces, dashboards and onboarding flows for the AlignBooks ERP platform, plus marketing visuals, social creatives and product videos. I also maintain the Figma design system.</p>
+        </li>
+        <li class="job">
+          <span class="when">Sep 2025 – Apr 2026</span>
+          <h3>UI/UX Designer</h3>
+          <span class="co">BlissTech Solution Pvt. Ltd. · Delhi</span>
+          <p>Designed responsive websites and landing pages in Figma and Framer, built wireframes and high-fidelity prototypes for client apps, and created reusable components and style guides.</p>
+        </li>
+        <li class="job">
+          <span class="when">Jun 2022 – Jul 2023</span>
+          <h3>UI/UX Designer</h3>
+          <span class="co">Maxgen Pvt. Ltd. · Ahmedabad</span>
+          <p>Created logos, brand assets and social graphics, edited videos and motion graphics, and designed wireframes and prototypes for mobile apps and websites.</p>
+        </li>
+      </ol>
+      <div class="side">
+        <div class="block">
+          <h4>Education</h4>
+          <div class="edu"><b>B.E. Electronics &amp; Communication</b><span>Gujarat Technological University · 2021</span></div>
+          <div class="edu"><b>Google UX Design Professional Certificate</b><span>Google</span></div>
+        </div>
+        <div class="block">
+          <h4>Skills</h4>
+          <div class="skills"><span class="pill">Branding</span><span class="pill">Logo design</span><span class="pill">Social media creatives</span><span class="pill">Typography</span><span class="pill">Wireframing</span><span class="pill">Prototyping</span><span class="pill">Design systems</span><span class="pill">Mobile &amp; web UI</span><span class="pill">HTML &amp; CSS</span></div>
+        </div>
+        <div class="block">
+          <h4>Tools</h4>
+          <div class="skills"><span class="pill">Figma</span><span class="pill">Framer</span><span class="pill">Photoshop</span><span class="pill">Illustrator</span><span class="pill">After Effects</span><span class="pill">Premiere Pro</span><span class="pill">Canva</span><span class="pill">Spline</span><span class="pill">LottieFiles</span><span class="pill">Midjourney</span><span class="pill">Adobe Firefly</span><span class="pill">Claude</span></div>
+        </div>
+        <div class="block">
+          <h4>Languages</h4>
+          <div class="skills"><span class="pill">English</span><span class="pill">Hindi</span><span class="pill">Bengali</span></div>
+        </div>
+        <div class="block">
+          <h4>Full resume</h4>
+          <a href="Prince_Sanjay_Mani_Resume.pdf" download="Prince_Sanjay_Mani_Resume.pdf" target="_blank" rel="noopener" class="btn dark magnetic" data-cursor="PDF">Download resume <span class="arr">↓</span></a>
+          <p class="resume-note">PDF, 1 page</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quotes" aria-label="Testimonials">
+  <div class="wrap">
+    <div class="sec-head"><h2><span class="mask"><span class="ln">Kind <em class="s">words</em></span></span></h2></div>
+    <div class="carousel">
+      <div>
+        <div class="stage" id="stage">
+          <div class="slide on">
+            <blockquote><span class="q">“</span>Add a real quote from a client here: what you changed for them and the result they saw.<span class="q">”</span></blockquote>
+            <div class="who"><span class="av art a1"></span><div><b>Client name</b><span>Role, Company</span></div></div>
+          </div>
+          <div class="slide">
+            <blockquote><span class="q">“</span>A second client quote works best when it names a number, like a faster onboarding or a higher conversion rate.<span class="q">”</span></blockquote>
+            <div class="who"><span class="av art a2"></span><div><b>Client name</b><span>Role, Company</span></div></div>
+          </div>
+          <div class="slide">
+            <blockquote><span class="q">“</span>Keep each quote to two or three sentences so it reads well at this size.<span class="q">”</span></blockquote>
+            <div class="who"><span class="av art a3"></span><div><b>Client name</b><span>Role, Company</span></div></div>
+          </div>
+        </div>
+        <p class="note">Placeholder testimonials. Replace them with quotes from real clients.</p>
+      </div>
+      <div class="ctrls">
+        <span class="count" id="count">01 / 03</span>
+        <div class="qbar"><i id="qbar"></i></div>
+        <div class="btns">
+          <button id="prev" class="magnetic" aria-label="Previous testimonial">←</button>
+          <button id="next" class="magnetic" aria-label="Next testimonial">→</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer id="contact">
+  <div class="wrap">
+    <h2 class="big-cta"><a href="mailto:princesanjaymani@gmail.com" data-cursor="Email">
+      <span class="mask"><span class="ln split">Got a project?</span></span>
+      <span class="mask"><span class="ln"><span class="split">Let's make it</span></span></span>
+      <span class="mask"><span class="ln"><em class="s split">happen</em> <span class="arrow">→</span></span></span>
+    </a></h2>
+    <div class="foot-grid">
+      <div>
+        <h4>Email</h4>
+        <a class="mail" href="mailto:princesanjaymani@gmail.com">princesanjaymani@gmail.com</a>
+      </div>
+      <div>
+        <h4>Socials</h4>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/princesanjaymani">LinkedIn</a></li>
+          <li><a href="https://www.behance.net/princemani6">Behance</a></li>
+          <li><a href="Prince_Sanjay_Mani_Resume.pdf" download>Resume (PDF)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="#works">Works</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal"><span>© 2026 Prince Mani</span><button class="totop" id="totop">Back to top ↑</button></div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
